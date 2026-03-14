@@ -16,6 +16,37 @@ menutoggler.addEventListener("click", () => {
   }
 });
 
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+
+                    if (link.getAttribute("href") === "#" + id) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    },
+    {
+        rootMargin: "-120px 0px -70% 0px",
+        threshold: 0
+    }
+);
+
+sections.forEach((section) => observer.observe(section));
+
+sections.forEach((section) => {
+    observer.observe(section);
+});
+
 const researchLineAcronymToName = {
   "CPS": "cyber-physical-systems",
   "DSI": "data-and-systems-intelligence",
@@ -80,7 +111,7 @@ $(document).ready(function () {
 
       // Loop through each project in the Projects array
       $.each(Projects, function (index, project) {
-        if (category === 'all' || category === project.research_line) {
+          if (category === 'all' || project.research_line.includes(category)) {
           // Create a new opportunity card for each project
           const opportunityCard = document.createElement('div');
           opportunityCard.classList.add('opportunity-card');
@@ -119,8 +150,8 @@ $(document).ready(function () {
         }
       });
     } else {
-    // If there are no projects available, show the hidden message div
-    $("#no-projects-message").show();
+        // If there are no projects available, show the hidden message div
+        $("#no-projects-message").show();
     }
     
     // Check for overflow in descriptions after content is loaded

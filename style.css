@@ -65,12 +65,19 @@ input {
   outline: none;
   cursor: pointer;
 }
-
+/*
 .header {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   background-color: var(--primary-dark);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}*/
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -79,11 +86,15 @@ input {
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-block: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-block: 0.4rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .title {
@@ -177,6 +188,11 @@ input {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--secondary-accent);
+}
+
+.nav-link.active {
+    color: var(--primary-accent);
+    font-weight: 600;
 }
 
 .first-link {

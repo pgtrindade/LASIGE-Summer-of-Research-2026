@@ -1,5 +1,14 @@
 const Projects = [
     {
+        "title": "Gaming",
+        "num_students": 2,
+        "description": `Short witty description`,
+        "mentors": "Prof. André Rodrigues, David Gonçalves",
+        "research_line": ["IHCI"],
+        "link": "https://forms.gle/YvhhkGX82L2da1gh6"
+    },
+    
+    {
         "title": "Co-Designing Customizable and Adaptable Intelligent Virtual Agents (IVAs) with Neurodivergent Individuals to Support Their Emotional Regulation",
         "num_students": 2,
         "description": `Neurodivergent individuals often experience difficulties with emotional regulation. Assistive Technologies (ATs) are promising alternatives to in-person psychotherapeutic interventions, as they may complement these interventions, can be used on demand, and allow for overcoming potential socio-communicative constraints. Intelligent Virtual Agents (IVAs) can promote emotional regulation in neurodivergent adults, increasing their independence and quality of life, especially if individually customized.
@@ -11,6 +20,9 @@ Our main contributions are: 1) a dataset of text annotated with the emotional in
         "research_line": ["IHCI"],
         "link": "https://forms.gle/YvhhkGX82L2da1gh6"
     },
+
+
+
     {
         "title": "A deep dive into hashtable design",
         "num_students": 1,
@@ -25,6 +37,9 @@ To retrieve this data, all one needs is to calculate the hash of the key, to obt
         "research_line": ["RSS"],
         "link": "https://forms.gle/XBrqQ2F7Fhnsnsen8"
     },
+
+
+
     {
         "title": "Specification Synthesis of Liquid Types using Large Language Models",
         "num_students": 1,
@@ -41,6 +56,9 @@ This project addresses these barriers by automating the generation of liquid typ
         "research_line": ["RSS"],
         "link": "https://forms.gle/xBgEG92feuJvVQ1F7"
     },
+
+
+
     {
         "title": "Drones poweres by Android",
         "num_students": 4,
@@ -49,6 +67,9 @@ This project addresses these barriers by automating the generation of liquid typ
         "research_line": ["CPS"],
         "link": "https://forms.gle/cLydo22YJRjqTHu18"
     },
+
+
+
     {
         "title": "Remote Grandparenting: Telepresence Robots for Family Connection and Shared Agency in the Home",
         "num_students": 2,
@@ -61,6 +82,9 @@ From a research perspective, the project contributes to the field of Human-Robot
         "research_line": ["IHCI"],
         "link": "https://forms.gle/pyDa9rPrJ3wGmTK26"
     },
+
+
+
     {
         "title": "Robots for Good: Exploring Altruism, Identity, and Perception in Elder Care and Community Settings",
         "num_students": 2,
@@ -73,6 +97,9 @@ In both cases, older adults will be invited to collaborate with or delegate task
         "research_line": ["IHCI"],
         "link": "https://forms.gle/LxAA6NPGMmi1A97a6"
     },
+
+
+
     {
         "title": "What users can do about mobile energy consumption?",
         "num_students": 1,
@@ -85,6 +112,9 @@ Applying rigorous statistical methods (for example, multivariate regression), we
         "research_line": ["RSS"],
         "link": "https://forms.gle/FfzfL34NnCWqAgit7"
     },
+
+
+
     {
         "title": "An exploration of Just-in-Time compilation",
         "num_students": 1,
@@ -99,6 +129,9 @@ Just-in-Time compilation is an advanced compiler technique, aiming to increase t
         "research_line": ["RSS"],
         "link": "https://forms.gle/hhxp8mbycki1aaJZ8"
     },
+
+
+
     {
         "title": "Exploring the integration of open Parkinson’s data for Multimodal Patient-centric learning",
         "num_students": 2,
@@ -111,6 +144,9 @@ By addressing these aims, this work will support future research on advanced mac
         "research_line": ["DSI"],
         "link": "https://forms.gle/STKnBdKR8DHMSDyCA"
     },
+
+
+
     {
         "title": "CBFT-Wallet: Uma Carteira Digital para gestão de Cripto-Moedas com elevadas garantias de segurança",
         "num_students": 1,
@@ -121,6 +157,9 @@ A CBFT-Wallet foi desenvolvida em Kotlin (https://github.com/bernymac/CBFT-Walle
         "research_line": ["DS2"],
         "link": "https://forms.gle/H32m6KeY4DMyHajv6"
     },
+
+
+
     {
         "title": "Improving the Usability of the Æon Programming Language",
         "num_students": 2,
@@ -133,6 +172,9 @@ Another direction is to explore how to add LLM support for a language that does 
         "research_line": ["RSS"],
         "link": "https://forms.gle/CEyAAWf5Fm4RVPba9"
     },
+
+
+
     {
         "title": "Theorem Synthesis",
         "num_students": 1,
@@ -145,6 +187,9 @@ In this project, we want to help them by developing a correct-by-construction ap
         "research_line": ["RSS"],
         "link": "https://forms.gle/KyRApkWrBWTuNYE29"
     },
+
+
+
     {
         "title": "Making Blossom Robots",
         "num_students": 2,
@@ -155,6 +200,9 @@ In this summer research project, we want to develop several blossom robots for f
         "research_line": ["IHCI"],
         "link": "https://forms.gle/G7dRSDvhoV5CrSNa7"
     },
+
+
+
     {
         "title": "Message-passing Concurrent Programming",
         "num_students": 1,
@@ -170,6 +218,9 @@ The student shall design and program, both the protocols and the code for differ
         "research_line": ["RSS"],
         "link": "https://forms.gle/Y7boDDcubgfYAb3H6"
     },
+
+
+
     {
         "title": "Testing Message-passing Concurrent Programs",
         "num_students": 1,
@@ -184,6 +235,9 @@ This project aims at writing (or adapting) a series of small concurrent programs
         "research_line": ["RSS"],
         "link": "https://forms.gle/eaQkL9YJaZbuZQny9"
     },
+
+
+
     {
         "title": "Wi-Fi-based buildings occupancy detection, estimation, and location",
         "num_students": 1,
@@ -196,6 +250,9 @@ This project introduces a new framework for efficiently and rapidly identifying 
         "research_line": ["CPS"],
         "link": "https://forms.gle/xX6a4e2AAgSaiGAF8"
     },
+
+
+
     {
         "title": "Coverage-Optimal Fault-Tolerant Swarm of UAVs",
         "num_students": 2,
@@ -213,6 +270,9 @@ By enabling UAV swarms to adaptively balance fault tolerance and spatial awarene
         "research_line": ["CPS", "DS2"],
         "link": "https://forms.gle/vL24gTVoBir2rUmT8"
     },
+
+
+
     {
         "title": "Legged Locomotion - pupper robot",
         "num_students": 1,
@@ -221,6 +281,9 @@ By enabling UAV swarms to adaptively balance fault tolerance and spatial awarene
         "research_line": ["CPS", "DSI"],
         "link": "https://forms.gle/4FAs3rngTpnHLB3F6"
     },
+
+
+
     {
         "title": "Knowledge and Data: boosting explainability and performance of real-world machine learning applications",
         "num_students": 2,
@@ -233,4 +296,5 @@ Join us to contribute to meaningful research with real-world impact, while deepe
         "research_line": ["DSI", "HBI"],
         "link": "https://forms.gle/JKoSJziuwGvxsLip7"
     },
+    
 ];

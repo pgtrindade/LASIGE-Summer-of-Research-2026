@@ -41,15 +41,15 @@ Our program may offer projects across LASIGE's seven research lines:
 * **RSS**: Reliable Software Systems
 * **ToC**: Theory of Computing
 
-## Key Dates for 2025
+## Key Dates for 2026
 
 | Milestone | Date |
 |-----------|------|
-| Applications Open | May 5th |
-| Application Deadline | May 31st |
-| Candidate Selection | June 13th |
-| Program Start | June 30th |
-| Program End | September 30th |
+| Applications Open | TBD |
+| Application Deadline | TBD |
+| Candidate Selection | TBD |
+| Program Start | TBD |
+| Program End | TBD |
 
 ## How to Apply
 
