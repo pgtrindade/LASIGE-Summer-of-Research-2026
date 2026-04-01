@@ -1180,3 +1180,15 @@ a {
 .button {
   text-decoration: none;
 }
+
+.mentor-link {
+    color: var(--body-font-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mentor-link:hover {
+    color: var(--primary-accent);
+    text-decoration: underline;
+}

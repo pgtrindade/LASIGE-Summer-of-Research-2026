@@ -41,11 +41,11 @@ const observer = new IntersectionObserver(
     }
 );
 
-sections.forEach((section) => observer.observe(section));
 
 sections.forEach((section) => {
     observer.observe(section);
 });
+
 
 const researchLineAcronymToName = {
   "CPS": "cyber-physical-systems",
@@ -121,6 +121,17 @@ $(document).ready(function () {
             researchLinesHTML += `<a href="https://www.lasige.pt/research-line/${researchLineAcronymToName[line]}/" target="_blank" class="research-line-tag research-line-${line}">${line}</a>`
           });
 
+          let mentorsHTML = '';
+
+          if (Array.isArray(project.mentors)) {
+              project.mentors.forEach((mentor, i) => {
+                  mentorsHTML += `<a href="${mentor.link}" target="_blank" class="mentor-link">${mentor.name}</a>`;
+                  if (i < project.mentors.length - 1) mentorsHTML += ', ';
+              });
+          } else {
+             mentorsHTML = project.mentors;
+          }
+
           // Populate the opportunity card with details
           opportunityCard.innerHTML = `<div class="card">
             <h3 class="title card-title">${project.title}</h3>
@@ -134,7 +145,7 @@ $(document).ready(function () {
             <div class="card-details-wrapper">
               <div class="card-details">
                 <strong>Mentors</strong>
-                <span>${project.mentors}</span>
+                <span>${mentorsHTML}</span>
               </div>
               <div class="card-details card-description">
                 <strong>Description</strong>
