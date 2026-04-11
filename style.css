@@ -909,15 +909,27 @@ input {
 }
 
 #footer .logo-image {
-  max-width: 150px;
-  /* Remove the white background and add styling to make the logo visible */
-  padding: 5px;
+    display: block;
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 5px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+#footer .footer-content {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#footer .logo-image {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 .horizontal-line {
