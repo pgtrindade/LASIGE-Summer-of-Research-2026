@@ -894,6 +894,122 @@ input {
   margin: 5rem 0;
 } */
 
+
+
+/*************************** Previous Editions **************************/
+/* Styles for the website Previous Editions section. */
+
+.previous-projects {
+    padding: 5rem 0;
+    background-color: #f8f9fb;
+    text-align: center;
+}
+
+.previous-projects-text {
+    max-width: 700px;
+    margin: 1rem auto 2rem;
+    line-height: 1.6;
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: white;
+    min-height: 500px;
+    height: 500px;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.carousel-slide img,
+.carousel-slide iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.carousel-slide img {
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-arrow-left {
+    left: 15px;
+}
+
+.carousel-arrow-right {
+    right: 15px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #c7c7c7;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+    background: #333;
+    transform: scale(1.15);
+}
+
 /*************************** Footer **************************/
 /* Styles for the website footer. */
 

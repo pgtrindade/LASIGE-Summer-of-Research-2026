@@ -152,7 +152,7 @@
                   </div>
 
                   <div id="filter-buttons">
-                      Filter buttons for project categories
+                      <!-- Filter buttons for project categories -->
                       <button class="filter-button active" data-category="all">
                           All
                       </button>
@@ -197,6 +197,33 @@
           </div>
       </section>
 
+
+      <section id="previous-projects" class="previous-projects">
+          <div class="container">
+              <div class="section-metadata">
+                  <span class="section-tagline">Previous Editions</span>
+                  <h2 class="title section-title">Highlights from past LASIGE Summer of Research</h2>
+              </div>
+
+              <div class="carousel" id="previous-projects-carousel">
+                  <button type="button" class="carousel-arrow carousel-arrow-left" id="carousel-prev" aria-label="Previous slide">
+                      &#10094;
+                  </button>
+
+                  <div class="carousel-track-container" id="previous-projects-container">
+                      <!-- Slides are inserted here by JS -->
+                  </div>
+
+                  <button type="button" class="carousel-arrow carousel-arrow-right" id="carousel-next" aria-label="Next slide">
+                      &#10095;
+                  </button>
+              </div>
+
+              <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
+      </section>
+
+
       <footer id="footer">
           <div class="container">
               <div class="footer-content">
@@ -233,8 +260,13 @@
           </div>
       </footer>
 
+
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
       <script src="script.js"></script>
+
+      <script src="previous-editions.js"></script>
+
       <script src="projects.js"></script> <!-- List of all projects -->
       <script src="category-description.js"></script>
   </body>
