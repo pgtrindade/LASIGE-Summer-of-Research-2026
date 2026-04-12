@@ -97,6 +97,17 @@ input {
     z-index: 1000;
 }
 
+/* Navbar hook offsets */
+#home {
+    scroll-margin-top: 100px;
+}
+
+#about,
+#intern,
+#previous-projects {
+    scroll-margin-top: 40px;
+}
+
 .title {
   color: var(--dark-color);
   font-weight: 700;

@@ -20,7 +20,7 @@ const previousProjectFiles = [
 let currentSlideIndex = 0;
 let carouselInterval = null;
 let isCarouselHovered = false;
-const autoSlideDelay = 3000;
+const autoSlideDelay = 4500;
 
 function createSlideElement(file, index) {
     const extension = file.split(".").pop().toLowerCase();
