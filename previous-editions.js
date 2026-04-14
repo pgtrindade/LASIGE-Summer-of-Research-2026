@@ -1,17 +1,12 @@
 const previousProjectFiles = [
-    "Images/previous-projects/1.jpg",
-    "Images/previous-projects/2.jpg",
-    "Images/previous-projects/3.jpg",
-    "Images/previous-projects/4.jpg",
     "Images/previous-projects/5.jpg",
+    "Images/previous-projects/2.jpg",
     "Images/previous-projects/6.jpg",
     "Images/previous-projects/7.jpg",
     "Images/previous-projects/8.jpg",
     "Images/previous-projects/9.jpg",
     "Images/previous-projects/10.jpg",
     "Images/previous-projects/11.jpg",
-    "Images/previous-projects/12.jpg",
-    "Images/previous-projects/13.jpg",
     "Images/previous-projects/14.jpg",
     "Images/previous-projects/15.jpg",
 
