@@ -46,19 +46,19 @@ Our program may offer projects across LASIGE's seven research lines:
 | Milestone | Date |
 |-----------|------|
 | Applications Open | May 6th |
-| Application Deadline | TBA |
-| Candidate Selection | TBA |
-| Program Start | TBA |
-| Program End | TBA |
+| Application Deadline | June 1st |
+| Candidate Selection | June 19th |
+| Program Start | July 1st |
+| Program End | September 11th |
 
 ## How to Apply
 
 1. Browse the available projects in the Research Opportunities section of our website (look at the description of the repo for link)
 2. Select the project(s) that match your interests and background
 3. Click the "Apply Here" button on the project card
-4. Submit your application before the deadline (May TBA, 2026)
+4. Submit your application before the deadline (June 3rd, 2026)
 
-If you're interested in the program but don't see any currently available projects, you can [express your interest here](https://forms.gle/W5PsetQ4kho1mMC9A) to be notified when new projects are posted.
+If you're interested in the program but don't see any currently available projects, you can [express your interest here](https://forms.gle/YHHNvBgNQ9nBbVu1A) to be notified when new projects are posted.
 
 ## Selection Process
 
@@ -68,7 +68,7 @@ Applications will be reviewed by project mentors based on:
 * Motivation and fit for the specific project
 * Potential for growth as a researcher
 
-Shortlisted candidates may be contacted for interviews before final selections are announced on June TBA.
+Shortlisted candidates may be contacted for interviews before final selections are announced on June 19th.
 
 ---
 

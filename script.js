@@ -4,16 +4,16 @@ const navbar = document.querySelector(".navbar");
 const menu = document.querySelector(".menu");
 
 menutoggler.addEventListener("click", () => {
-  // Toggle the "show-menu" class on the navbar to show/hide the menu
-  navbar.classList.toggle("show-menu");
-  if (navbar.classList.contains("show-menu")) {
-    // When showing the menu, set max-height to allow it to expand
-    menu.style.maxHeight = menu.scrollHeight + "px";
-  } else {
-    // When hiding the menu, set max-height to 0 and hide overflow
-    menu.style.maxHeight = "0px";
-    menu.style.overflow = "hidden";
-  }
+    // Toggle the "show-menu" class on the navbar to show/hide the menu
+    navbar.classList.toggle("show-menu");
+    if (navbar.classList.contains("show-menu")) {
+        // When showing the menu, set max-height to allow it to expand
+        menu.style.maxHeight = menu.scrollHeight + "px";
+    } else {
+        // When hiding the menu, set max-height to 0 and hide overflow
+        menu.style.maxHeight = "0px";
+        menu.style.overflow = "hidden";
+    }
 });
 
 const sections = document.querySelectorAll("section");
@@ -41,99 +41,126 @@ const observer = new IntersectionObserver(
     }
 );
 
-
 sections.forEach((section) => {
     observer.observe(section);
 });
 
-
 const researchLineAcronymToName = {
-  "CPS": "cyber-physical-systems",
-  "DSI": "data-and-systems-intelligence",
-  "DS2": "dependable-and-secure-decentralized-systemsd-systems",
-  "HBI": "health-and-biomedical-informatics",
-  "IHCI": "inclusive-human-computer-interaction",
-  "RSS": "reliable-software-systems",
-  "ToC": "theory-of-computing"
+    "CPS": "cyber-physical-systems",
+    "DSI": "data-and-systems-intelligence",
+    "DS2": "dependable-and-secure-decentralized-systemsd-systems",
+    "HBI": "health-and-biomedical-informatics",
+    "IHCI": "inclusive-human-computer-interaction",
+    "RSS": "reliable-software-systems",
+    "ToC": "theory-of-computing"
 };
 
 $(document).ready(function () {
-  
-  function checkDescriptionOverflow() {
-    $('.card-description').each(function() {
-        const cardDescriptionElement = this;
-        const $cardDescription = $(cardDescriptionElement);
 
-        $cardDescription.off('scroll.descriptionIndicator');
+    function checkDescriptionOverflow() {
+        $('.card-description').each(function () {
+            const cardDescriptionElement = this;
+            const $cardDescription = $(cardDescriptionElement);
 
-        // Reset classes: remove has-overflow (it will be re-added if needed)
-        // and the new show-scroll-indicator class.
-        // The old at-bottom class is no longer used.
-        $cardDescription.removeClass('has-overflow show-scroll-indicator');
+            $cardDescription.off('scroll.descriptionIndicator');
 
-        const hasScrollbar = cardDescriptionElement.scrollHeight > cardDescriptionElement.clientHeight;
+            // Reset classes
+            $cardDescription.removeClass('has-overflow show-scroll-indicator');
 
-        if (hasScrollbar) {
-            $cardDescription.addClass('has-overflow');
+            const hasScrollbar = cardDescriptionElement.scrollHeight > cardDescriptionElement.clientHeight;
 
-            function updateIndicatorState() {
-                // Show indicator only if scrollbar is at the very top (scrollTop is 0 or very close)
-                // A small threshold (e.g., 5px) can account for minor rendering differences.
-                if (cardDescriptionElement.scrollTop < 5) {
-                    if (!$cardDescription.hasClass('show-scroll-indicator')) {
-                        $cardDescription.addClass('show-scroll-indicator');
-                    }
-                } else {
-                    if ($cardDescription.hasClass('show-scroll-indicator')) {
-                        $cardDescription.removeClass('show-scroll-indicator');
+            if (hasScrollbar) {
+                $cardDescription.addClass('has-overflow');
+
+                function updateIndicatorState() {
+                    if (cardDescriptionElement.scrollTop < 5) {
+                        if (!$cardDescription.hasClass('show-scroll-indicator')) {
+                            $cardDescription.addClass('show-scroll-indicator');
+                        }
+                    } else {
+                        if ($cardDescription.hasClass('show-scroll-indicator')) {
+                            $cardDescription.removeClass('show-scroll-indicator');
+                        }
                     }
                 }
-            }
 
-            updateIndicatorState();
-
-            // Attach the scroll event listener to update state on scroll
-            $cardDescription.on('scroll.descriptionIndicator', function() {
                 updateIndicatorState();
+
+                $cardDescription.on('scroll.descriptionIndicator', function () {
+                    updateIndicatorState();
+                });
+            }
+        });
+    }
+
+    function hideUnusedFilterButtons() {
+        if (!Projects || Projects.length === 0) {
+            $(".filter-button").each(function () {
+                const category = $(this).data("category");
+
+                if (category !== "all") {
+                    $(this).hide();
+                }
             });
+            return;
         }
-    });
-  }
 
+        // Collect categories that actually exist
+        const availableCategories = new Set();
 
-  function displayProjects(category) {
-    // Clear existing opportunities
-    $(".opportunity-card").remove();
+        Projects.forEach(project => {
+            if (Array.isArray(project.research_line)) {
+                project.research_line.forEach(line => {
+                    availableCategories.add(line);
+                });
+            }
+        });
 
-    if (Projects && Projects.length > 0) {
-      // Hide the "no projects" message
-      $("#no-projects-message").hide();
+        // Hide unused buttons
+        $(".filter-button").each(function () {
+            const category = $(this).data("category");
 
-      // Loop through each project in the Projects array
-      $.each(Projects, function (index, project) {
-          if (category === 'all' || project.research_line.includes(category)) {
-          // Create a new opportunity card for each project
-          const opportunityCard = document.createElement('div');
-          opportunityCard.classList.add('opportunity-card');
-          
-          let researchLinesHTML = '';
-          project.research_line.forEach(line => {
-            researchLinesHTML += `<a href="https://www.lasige.pt/research-line/${researchLineAcronymToName[line]}/" target="_blank" class="research-line-tag research-line-${line}">${line}</a>`
-          });
+            if (category !== "all" && !availableCategories.has(category)) {
+                $(this).hide();
+            }
+        });
+    }
 
-          let mentorsHTML = '';
+    function displayProjects(category) {
+        // Clear existing opportunities
+        $(".opportunity-card").remove();
 
-          if (Array.isArray(project.mentors)) {
-              project.mentors.forEach((mentor, i) => {
-                  mentorsHTML += `<a href="${mentor.link}" target="_blank" class="mentor-link">${mentor.name}</a>`;
-                  if (i < project.mentors.length - 1) mentorsHTML += ', ';
-              });
-          } else {
-             mentorsHTML = project.mentors;
-          }
+        if (Projects && Projects.length > 0) {
+            // Hide the "no projects" message
+            $("#no-projects-message").hide();
 
-          // Populate the opportunity card with details
-          opportunityCard.innerHTML = `<div class="card">
+            Projects.sort((a, b) => a.title.localeCompare(b.title));
+
+            // Loop through each project in the Projects array
+            $.each(Projects, function (index, project) {
+                if (category === 'all' || project.research_line.includes(category)) {
+                    // Create a new opportunity card for each project
+                    const opportunityCard = document.createElement('div');
+                    opportunityCard.classList.add('opportunity-card');
+
+                    let researchLinesHTML = '';
+                    project.research_line.forEach(line => {
+                        researchLinesHTML += `<a href="https://www.lasige.pt/research-line/${researchLineAcronymToName[line]}/" target="_blank" class="research-line-tag research-line-${line}">${line}</a>`
+                    });
+
+                    let mentorsHTML = '';
+
+                    if (Array.isArray(project.mentors)) {
+                        project.mentors.forEach((mentor, i) => {
+                            mentorsHTML += `<a href="${mentor.link}" target="_blank" class="mentor-link">${mentor.name}</a>`;
+                            if (i < project.mentors.length - 1) mentorsHTML += '<br>';
+                        });
+                    } else {
+                        mentorsHTML = project.mentors;
+                    }
+
+                    // Populate the opportunity card with details
+                    opportunityCard.innerHTML = `<div class="card">
             <h3 class="title card-title">${project.title}</h3>
             <div class="card-tags-wrapper">
               ${researchLinesHTML}
@@ -156,38 +183,41 @@ $(document).ready(function () {
             <a href="${project.link}" target="_blank" class="button">Apply Here</a></div>
           `;
 
-          // Append the opportunity card to the container
-          document.querySelector(".card-group").appendChild(opportunityCard);
+                    // Append the opportunity card to the container
+                    document.querySelector(".card-group").appendChild(opportunityCard);
+                }
+            });
+        } else {
+            // If there are no projects available, show the hidden message div
+            $("#no-projects-message").show();
         }
-      });
-    } else {
-        // If there are no projects available, show the hidden message div
-        $("#no-projects-message").show();
+
+        // Check for overflow in descriptions after content is loaded
+        setTimeout(checkDescriptionOverflow, 100);
     }
-    
-    // Check for overflow in descriptions after content is loaded
-    setTimeout(checkDescriptionOverflow, 100);
-  }
 
-  // Call the displayProjects function to load all projects initially
-  displayProjects('all');
+    // Hide unused filters
+    hideUnusedFilterButtons();
 
-  // Function to handle filter button clicks
-  $(".filter-button").click(function () {
-    $(".filter-button").removeClass("active");
-    $(this).addClass("active");
-    const category = $(this).attr("data-category");
-    displayProjects(category);
-  });
+    // Call the displayProjects function to load all projects initially
+    displayProjects('all');
 
-  // Smooth scroll to the Research Opportunities section when "Apply Now" is clicked
-  $(".apply-button").click(function (e) {
-    e.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: $("#intern").offset().top
-      },
-      800
-    );
-  });
+    // Function to handle filter button clicks
+    $(".filter-button").click(function () {
+        $(".filter-button").removeClass("active");
+        $(this).addClass("active");
+        const category = $(this).attr("data-category");
+        displayProjects(category);
+    });
+
+    // Smooth scroll to the Research Opportunities section when "Apply Now" is clicked
+    $(".apply-button").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $("#intern").offset().top
+            },
+            800
+        );
+    });
 });

@@ -15,7 +15,7 @@
 
         DS2: {
             text: "Dependable and Secure Decentralized Systems (DS2) investigates models, protocols and architectures that are suitable for applications with strong dependability requirements, namely applications that need to remain operational despite accidental faults or malicious attacks. The solutions being developed cover a diverse set of objectives, enforcing the prevention, detection and tolerance of failures. The kind of environments that are being contemplated include cloud deployments, highly dynamic and geographically distributed networks, mobile distributed computing, web systems and applications, smart grids and other critical infrastructures.",
-            link: "https://lasige.pt/research-line/dependable-and-secure-decentralized-systemsd-systems/"
+            link: "https://lasige.pt/research-line/dependable-and-secure-decentralized-systems/"
         },
 
         HBI: {
@@ -63,7 +63,7 @@
         descriptionBox.innerHTML = `
       <p>${item.text}</p>
       <a href="${item.link}" target="_blank" class="learn-more-link">
-        Learn more →
+        See more →
       </a>
     `;
 
