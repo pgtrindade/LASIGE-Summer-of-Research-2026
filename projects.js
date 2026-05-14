@@ -766,4 +766,27 @@ const Projects = [
         "research_line": ["DSI"],
         "link": "https://forms.gle/B4eNqiNrKx4hnh2u7"
     },
+
+
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
+
+
+    {
+        "title": "Strategies for Adaptive Gradient Descent",
+        "num_students": 2,
+        "description": `
+            <p>Neural networks have revolutionized modern computing, but it is difficult to train them. In this project, the student will test different strategies to improve the training of neural networks, including changes of batch size, learning rate and others. Neural networks have revolutionized modern computing, but training them effectively remains challenging. Their performance is highly sensitive to choices such as batch size, learning rate, optimizer, initialization strategy, activation function, regularization method, and network architecture. In this project, the student will investigate different strategies to improve the training of neural networks. The work will include designing and training neural network models, systematically varying key hyperparameters such as batch size and learning rate, and comparing the effects on convergence speed, stability, training loss, validation accuracy, and generalization performance. The student will also explore additional techniques such as learning rate scheduling, early stopping, dropout, batch normalization, weight decay, and different optimization algorithms. Experiments will be conducted using benchmark datasets, and results will be analyzed to identify which strategies lead to more efficient and reliable training. The project aims to provide practical insight into how neural networks can be trained more effectively and to help the student develop skills in experimental design, model evaluation, and deep learning implementation.</p>
+
+            <br>
+
+            <strong>Expected project tasks and activities</strong>
+            <p>Train different neural nets on MNIST, MNIST Fashion, Cifar-100.</p>
+        `,
+        mentors: [
+            { name: "Prof. Márcia L. Baptista", link: "https://lasige.pt/member/marcia-l-baptista/" },
+        ],
+        "research_line": ["CPS"],
+        "link": "https://forms.gle/35YdkFkbWQ1dVSEh6"
+    },
 ];
