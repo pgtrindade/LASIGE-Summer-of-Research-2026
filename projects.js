@@ -624,6 +624,7 @@ const Projects = [
         `,
         mentors: [
             { name: "Sajjad Hekmat", link: "https://lasige.pt/member/sajjad-hekmat/" },
+            { name: "Prof. João Bimbo", link: "https://lasige.pt/member/joao-bimbo/" },
         ],
         "research_line": ["DSI"],
         "link": "https://forms.gle/vnue6AirPmjhGnLLA"
