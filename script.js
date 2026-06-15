@@ -48,7 +48,7 @@ sections.forEach((section) => {
 const researchLineAcronymToName = {
     "CPS": "cyber-physical-systems",
     "DSI": "data-and-systems-intelligence",
-    "DS2": "dependable-and-secure-decentralized-systemsd-systems",
+    "DS2": "dependable-and-secure-decentralized-systems",
     "HBI": "health-and-biomedical-informatics",
     "IHCI": "inclusive-human-computer-interaction",
     "RSS": "reliable-software-systems",

@@ -579,13 +579,13 @@ const Projects = [
             </ul>
         `,
         mentors: [
-            { name: "Prof. Filipe Gouveia", link: "https://lasige.pt/member/filipe-gouveia/" }, 
+            { name: "Prof. Filipe Gouveia", link: "https://lasige.pt/member/filipe-gouveia/" },
             { name: "Prof. Alcides Fonseca", link: "https://lasige.pt/member/alcides-fonseca/" },
         ],
         "research_line": ["RSS", "DSI"],
         "link": "https://forms.gle/RTo3utUYjqmbhZL86"
     },
-    
+
 
     ///////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////
@@ -604,7 +604,7 @@ const Projects = [
         "research_line": ["HBI", "IHCI"],
         "link": "https://forms.gle/J4vzspauv4aJ8Qn89"
     },
-        
+
 
     ///////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////
@@ -791,3 +791,10 @@ const Projects = [
         "link": "https://forms.gle/35YdkFkbWQ1dVSEh6"
     },
 ];
+
+
+
+// Conditionally export for CommonJS environments like Node.js, without breaking the browser.
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Projects;
+}
